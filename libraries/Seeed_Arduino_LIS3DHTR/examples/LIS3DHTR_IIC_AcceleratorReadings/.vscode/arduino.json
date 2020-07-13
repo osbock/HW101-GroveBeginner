@@ -1,0 +1,6 @@
+{
+    "programmer": "AVRISP mkII",
+    "board": "arduino:avr:uno",
+    "port": "COM4",
+    "sketch": "LIS3DHTR_IIC_AcceleratorReadings.ino"
+}
