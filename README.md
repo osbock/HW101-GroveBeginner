@@ -1,6 +1,8 @@
 # HW101-GroveBeginner
 Hardware 101 files for use with the Seeed Grove Beginner kit
 
+Here's the [wiki](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/)
+
 ## Pin Numbers
  * led = 4
  * buzzer = 5;
