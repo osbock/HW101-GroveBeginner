@@ -16,7 +16,7 @@ When armed, the RGB strip will be Green.
 
 When disarmed, the RGB strip will be off.
 
-When alarming, the RGB strip will be Red.
+When alarming, the RGB strip will be Red and the buzzer will buzz.
 
 ## Adding more features
 
