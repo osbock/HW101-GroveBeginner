@@ -1,3 +1,12 @@
+#include <Adafruit_NeoPixel.h>
+
+// What pin the LED strip is plugged into
+#define LED_PIN    3
+// How many NeoPixels are attached to the Arduino?
+#define LED_COUNT 15
+// Declare our NeoPixel strip object:
+Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
+
 // State management enum
 enum State{
   alarming,
@@ -34,7 +43,10 @@ int LOCKOUT_INTERVAL = 1000;
 
 
 void setup() {
-  // put your setup code here, to run once:
+    // INITIALIZE NeoPixel strip object (REQUIRED)
+    strip.begin();
+    // Turn OFF all pixels ASAP
+    strip.show();
 
     // Set the button to be an input for arming and disarming the alarm
     pinMode(BUTTON_PIN, INPUT);
@@ -67,14 +79,23 @@ void loop() {
       case alarming:
         Serial.println("Motion Detected");
         buzzBuzzer();
+
+        // Turn the strip Red
+        strip.fill(strip.Color(255, 0, 0));
+        strip.show();
         break;
       case armed:
         // We don't really care if we haven't seen anything as that's what we expect but we should indicate that we are armed by blinking
         Serial.println("Watching");
+        // Turn the strip green
+        strip.fill(strip.Color(0, 255, 0));
+        strip.show();
         break;
       case disarmed:
-        // We probably don't have to do anything to indicate that the system is off
+        // We probably don't have to do anything to indicate that the system is off other than show nothing
         Serial.println("Waiting for Activation");
+        strip.fill();
+        strip.show();
         break;
     }
 }
