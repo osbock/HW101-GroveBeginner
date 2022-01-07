@@ -32,7 +32,9 @@ void loop() {
     // if you get a newline, grab the value and display it in neopixels
     if (inChar == '\n') {
       int value = inString.toInt();
-      setlimit(value);
+      // make sure the value is in range
+      if ((value >=0) && (value <= LED_COUNT))
+        setlimit(value);
       // clear the string for new input:
       inString = "";
     }
