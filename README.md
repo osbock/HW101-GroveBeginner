@@ -5,7 +5,7 @@ Here's the [wiki](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/)
 
 [Baldwisdom.com Arduino Resources](https://baldwisdom.com/maker-resources/arduino-resources/)
 
-[Software Engineering Summit Slides](https://docs.google.com/presentation/d/1FtYAAjHqpHJoidBHixyJSkkEmkdKHpEts0PM433mjdw/edit?usp=sharing)
+[Software Engineering Summit Slides](https://docs.google.com/presentation/d/1MPk0WrpEHmujZIPF6vXlN1blzgKugMKN88a1x3zVi78/edit?usp=sharing)
 
 ## Pin Numbers
  * led = 4
